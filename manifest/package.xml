@@ -28,5 +28,9 @@
 		<members>PermissionsUsersLWC</members>
 		<name>PermissionSet</name>
 	</types>
+	<types>
+		<members>Usu_rio_grupo_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
 	<version>60.0</version>
 </Package>
