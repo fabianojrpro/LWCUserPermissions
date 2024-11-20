@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="User Permissions" icon-name="utility:lock">
+        <template if:true={permissions}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-4 slds-p-around_small">
+                    <ul class="slds-list_vertical slds-border_right slds-p-right_small">
+                        <template for:each={permissions} for:item="group">
+                            <li key={group.name}
+                                data-group-name={group.name}
+                                class="slds-item slds-p-vertical_small"
+                                onclick={handleGroupClick}
+                                style="cursor: pointer; color: #0070d2; font-weight: bold;">
+                                {group.name}
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+
+                <div class="slds-col slds-size_3-of-4 slds-p-around_small">
+                    <template if:true={selectedGroup}>
+                        <h3 style="margin-bottom: 5px; font-weight: bold;">{selectedGroup.name}</h3>
+                        <ul>
+                            <template for:each={selectedGroup.permissions} for:item="permission">
+                                <li key={permission}>{permission}</li>
+                            </template>
+                        </ul>
+                    </template>
+                    <template if:false={selectedGroup}>
+                        <p class="slds-text-color_weak">Select a group to view its permissions.</p>
+                    </template>
+                </div>
+            </div>
+        </template>
+        <template if:false={permissions}>
+            <p>No permissions available</p>
+        </template>
+    </lightning-card>
+</template>
