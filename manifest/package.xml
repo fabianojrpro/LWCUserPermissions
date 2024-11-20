@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
+	<!--<types>
 		<members>GroupRepository</members>
 		<members>UserPermissionController</members>
 		<members>UserPermissionService</members>
@@ -25,12 +25,21 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
-		<members>PermissionsUsersLWC</members>
-		<name>PermissionSet</name>
-	</types>
-	<types>
 		<members>Usu_rio_grupo_Record_Page</members>
 		<name>FlexiPage</name>
+	</types>-->
+	<types>
+		<members>Grupo__c-Grupo Layout</members>
+		<members>UsuarioGrupo__c-Usuário grupo Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>PermissionsUsersLWC</members>
+		<name>PermissionSet</name>
 	</types>
 	<version>60.0</version>
 </Package>
