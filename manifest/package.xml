@@ -2,10 +2,16 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>GroupRepository</members>
+		<members>GrupoActions</members>
+		<members>GrupoTriggerHandler</members>
 		<members>UserPermissionController</members>
 		<members>UserPermissionService</members>
 		<members>UsuarioGrupoRepository</members>
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ApexTrigger</name>
 	</types>
 	<types>
 		<members>Grupo__c.Nome__c</members>
